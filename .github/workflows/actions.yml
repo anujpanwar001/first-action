@@ -2,7 +2,10 @@ name: First work flow
 on: workflow_dispatch
 jobs:
   first-job: 
-    runs-on: windows-latest
+    runs-on: | 
+      windows-latest 
+      ubuntu-latest
+      macos-12
     steps:
       - name: first-step
         run: |
