@@ -2,12 +2,21 @@ name: First work flow
 on: workflow_dispatch
 jobs:
   first-job: 
-    runs-on: | 
-      windows-latest 
-      ubuntu-latest
-      macos-12
+    runs-on: windows-latest 
     steps:
       - name: first-step
         run: |
          echo "Hello World"
          echo "How are you"
+         
+  second-job:
+     runs-on: ubuntu-latest
+     steps:
+      - name: second-step
+        run: echo "hello"
+        
+  third-job:
+     runs-on: macos-12
+     steps:
+      - name: third-step
+        run: echo "third job"
